@@ -1,0 +1,9 @@
+version: '3'
+
+tasks:
+  compile:
+    cmds:
+      - clang -O2 -target bpf -I /usr/include/asm/types.h -c bpf/hello.c -o hello.o
+  run:
+    cmds:
+      - sudo go run .
